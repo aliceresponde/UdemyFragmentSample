@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootFragmentA"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#038493">
 
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:layout_gravity="center_horizontal"
+        android:layout_centerInParent="true"
         android:text="It´s Fragmet A"
         android:textColor="@android:color/white"
         android:layout_margin="30dp"
         android:textSize="20sp"
         />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tvQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Count : 0"
+        android:layout_below="@+id/tvTitle"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"/>
+
+</RelativeLayout>

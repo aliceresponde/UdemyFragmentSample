@@ -15,8 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Create instance o FragmentA
         FragmentA fragmentA = new FragmentA();
-        addFragmentAtoActivity(fragmentA);
-       // addFragmentAToActivity2(fragmentA);
+        FragmentB fragmentB = new FragmentB();
+        //addFragmentAtoActivity(fragmentA);
+        // addFragmentAToActivity2(fragmentA);
 
 
     }

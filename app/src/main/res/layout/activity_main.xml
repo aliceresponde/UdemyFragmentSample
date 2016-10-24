@@ -5,16 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
    android:orientation="vertical"
+    android:layout_margin="10dp"
     tools:context="com.example.aliciabeltran.udemyfragmentsample.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <fragment
+        android:id="@+id/fragment_a"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:name="com.example.aliciabeltran.udemyfragmentsample.FragmentA" />
 
-    <!--<fragment-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:name="com.example.aliciabeltran.udemyfragmentsample.FragmentA" />-->
+    <fragment
+        android:id="@+id/fragment_b"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:name="com.example.aliciabeltran.udemyfragmentsample.FragmentB" />
 
 </LinearLayout>
