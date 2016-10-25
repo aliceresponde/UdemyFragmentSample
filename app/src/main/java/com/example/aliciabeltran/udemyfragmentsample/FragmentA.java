@@ -16,7 +16,9 @@ import org.w3c.dom.Text;
 
 public class FragmentA extends Fragment {
 
+
     private TextView tvQuantity;
+
 
     /**
      * How to asocciate layout file to fragment
@@ -40,5 +42,12 @@ public class FragmentA extends Fragment {
      */
     public void setCounterValue(int counterValue) {
         tvQuantity.setText("Counter : " + counterValue);
+    }
+
+    /**
+     * interface with contract that hostActivity will implement
+     */
+    public interface ICounter{
+        public void setCounterValue(int counterValue);
     }
 }

@@ -15,7 +15,8 @@ import android.widget.Button;
 public class FragmentB extends Fragment {
 
     private Button btnAdd;
-    private int counter = 0;
+    private int counterValue = 0;
+    private FragmentA.ICounter mCounter;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -25,9 +26,9 @@ public class FragmentB extends Fragment {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                counter ++;
-                MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.addCounter(counter);
+                counterValue++;
+                mCounter = (FragmentA.ICounter) getActivity();
+                mCounter.setCounterValue(counterValue);
             }
         });
         return view;

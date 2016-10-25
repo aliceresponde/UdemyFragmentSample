@@ -5,15 +5,12 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FragmentA.ICounter {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
 //
 //        //Create instance o FragmentA
 //        FragmentA fragmentA = new FragmentA();
@@ -48,14 +45,18 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    /**
-     *
-     * @param counter
-     */
-    public void addCounter(int counter) {
+//    /**
+//     * Get reference to FragmentA by FragmentManager finding by ID
+//     * @param counter
+//     */
+//    public void addCounter(int counter) {
+//        FragmentA fragmentA = (FragmentA) getFragmentManager().findFragmentById(R.id.fragment_a);
+//        fragmentA.setCounterValue(counter);
+//    }
+
+    @Override
+    public void setCounterValue(int counterValue) {
         FragmentA fragmentA = (FragmentA) getFragmentManager().findFragmentById(R.id.fragment_a);
-        fragmentA.setCounterValue(counter);
-
-
+        fragmentA.setCounterValue(counterValue);
     }
 }
