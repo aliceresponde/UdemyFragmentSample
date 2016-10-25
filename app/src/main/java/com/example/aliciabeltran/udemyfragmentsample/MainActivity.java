@@ -13,11 +13,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        //Create instance o FragmentA
-        FragmentA fragmentA = new FragmentA();
-        FragmentB fragmentB = new FragmentB();
-        //addFragmentAtoActivity(fragmentA);
-        // addFragmentAToActivity2(fragmentA);
+
+//
+//        //Create instance o FragmentA
+//        FragmentA fragmentA = new FragmentA();
+//        FragmentB fragmentB = new FragmentB();
+//        //addFragmentAtoActivity(fragmentA);
+//        // addFragmentAToActivity2(fragmentA);
 
 
     }
@@ -44,5 +46,16 @@ public class MainActivity extends AppCompatActivity {
         //                      (root elemte un activity layout, fragment to add, fragments alias);
         fragmentTransaction.add(R.id.activity_main_root, fragmentA, "MyFragmentA");
         fragmentTransaction.commit();
+    }
+
+    /**
+     *
+     * @param counter
+     */
+    public void addCounter(int counter) {
+        FragmentA fragmentA = (FragmentA) getFragmentManager().findFragmentById(R.id.fragment_a);
+        fragmentA.setCounterValue(counter);
+
+
     }
 }
